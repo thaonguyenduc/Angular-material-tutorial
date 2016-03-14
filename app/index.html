@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+		
+	<link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="./assets/app.css">
+	
+</head>
+<body ng-app="myContactApp" ng-cloak>
+	<div ng-controller="mainController as vm" class="ng-scope ng-binding" >
+			{{vm.message}}
+	</div>
+	<div ng-controller="demoWatchController as dmc">
+	<<ul>
+		<li ng-repeat="user in users1">{{user.name}}. <a href="#" title="Add To Wish List" ng-click="addToWhishList(user)">Add To Wish List</a></li>
+	</ul>
+		
+		
+	</div>
+	
+	<div layout= "row">
+	<div ng-include="'./dist/views/sitenav.html'"></div>
+		
+		<div layout= "column" flex>
+				<div style="background-color: #3949ab">
+					Content
+					<md-content >
+					    Main content 
+					</md-content>
+				</div>
+		</div>
+		
+	</div>
+<div layout="row">
+	<div layout= "row">
+		<div flex style="background-color: #099688 ">First item in row</div>
+		<div flex style="background-color: #3949ab ">Second item in row</div>
+		<div flex style="background-color: #3949ab ">Third item in row</div>
+	</div>
+	<div layout= "column">
+		<div flex style="background-color: #099688 ">First item in column</div>
+		<div flex style="background-color: #3949ab ">Second item in column</div>
+	</div>
+	
+</div>
+	<script src="../../bower_components/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../bower_components/angular-material/angular-material.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../bower_components/angular-animate/angular-animate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../bower_components/angular-aria/angular-aria.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./dist/services/userService.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="./dist/models/user.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="./dist/controllers/mainController.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="./dist/controllers/demoWatchController.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="./dist/_all.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="./dist/boot.js" type="text/javascript" charset="utf-8" ></script>
+
+</body>
+</html>
